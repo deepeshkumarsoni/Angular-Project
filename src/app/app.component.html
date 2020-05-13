@@ -1,0 +1,14 @@
+<div>
+  <h1> MY TODO APP </h1>
+</div>
+
+<input placeholder="Enter items " (input)="onChange($event)" [(ngModel)]="newTodo"/>
+<button (click)="create()"> Create 
+</button>
+<button (click)="allDelete()" >Delete </button>
+
+<ul *ngFor = "let todo of todoList">
+  <li> {{todo}} </li>  
+  <button (click)="deleteItem(todoList)" >Delete 
+  </button>
+</ul>
