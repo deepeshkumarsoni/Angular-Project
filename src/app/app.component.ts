@@ -18,7 +18,24 @@ export class AppComponent {
     allDelete(){
       this.todoList = [];
     }
-    deleteItem(list){
-        var index = this.todoList.indexof(list);
-    
+    deleteItem(itemToDelete){
+      const newtodoList = this.todoList.filter((existingItem) =>
+       existingItem !== itemToDelete);
+       this.todoList = newtodoList;
+
+        // const newtodoList = [];
+        // for(var i =0; i<this.todoList.length;i++){
+        //   const itemInExistList = this.todoList[i];
+        //     if(this.todoList[i] === item){
+        //       continue;
+        //     }
+        //     else{
+        //       newtodoList.push(itemInExistList);
+        //     }
+
+        //     }
+        //     this.todoList = newtodoList;
+        }
+      
 }
+
